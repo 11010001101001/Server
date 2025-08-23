@@ -38,7 +38,7 @@ class TTSVoiceSynthesizer:
             speaker_wav=f'voice_samples/{request.voice_sample}',
             language="ru",
             speed=request.voice_speed,
-            split_sentences=True
+            split_sentences=False
         )
         buf = io.BytesIO()
         sf.write(buf, audio, 24000, format='WAV')
